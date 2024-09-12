@@ -12,7 +12,7 @@ export default function TekstSlika({
     <section className="section-box">
       <div className="container">
         <div className="tab-content">
-          <diva>
+          <div>
             <div className="bg-2 panel-box mt-50">
               <div className="row">
                 <div className="col-lg-6 col-md-12">
@@ -43,7 +43,7 @@ export default function TekstSlika({
                 </div>
               </div>
             </div>
-          </diva>
+          </div>
         </div>
       </div>
     </section>

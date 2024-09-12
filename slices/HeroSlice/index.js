@@ -6,7 +6,6 @@ import Hero from "../../components/Hero";
  * @param {HeroSliceProps}
  */
 const HeroSlice = ({ slice }) => {
-  console.log(slice.primary);
   return (
     <section
       data-slice-type={slice.slice_type}

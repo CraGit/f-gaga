@@ -11,7 +11,7 @@ import SectionHeading from "@/components/SectionHeading";
 
 const NajaveListSlice = ({ slice, context }) => {
   const { najavaData } = context;
-  console.log(context);
+
   return (
     <section
       data-slice-type={slice.slice_type}

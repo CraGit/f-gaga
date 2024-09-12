@@ -6,7 +6,6 @@ import { components } from "@/slices";
 import { createClient } from "@/prismicio";
 
 export default function Page({ page, najavaData }) {
-  console.log(najavaData);
   return (
     <>
       <Head>

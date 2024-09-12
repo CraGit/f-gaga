@@ -49,7 +49,7 @@ const Sidebar = ({ openClass, handleClose }) => {
                           : "has-children"
                       }
                     >
-                      <Link href="/" className="active">
+                      <Link href="/" className="active" onClick={handleClose}>
                         Naslovnica
                       </Link>
                     </li>

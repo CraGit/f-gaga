@@ -8,7 +8,6 @@ import Hero from "@/components/Hero";
 import NajaveCardList from "@/components/NajaveCardList";
 
 export default function Page({ page, najave }) {
-  console.log(najave);
   return (
     <>
       <Head>

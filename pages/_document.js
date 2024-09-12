@@ -1,6 +1,3 @@
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
-import Layout from "@/components/layout/Layout";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -13,7 +10,6 @@ export default function Document() {
         <Main />
 
         <NextScript />
-        {/* <script async src="assets/js/app.js" /> */}
       </body>
     </Html>
   );

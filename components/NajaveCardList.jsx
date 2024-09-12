@@ -3,7 +3,6 @@ import NajavaCard from "./NajavaCard";
 import Link from "next/link";
 
 export default function NajaveCardList({ najave, limit }) {
-  console.log(najave);
   return (
     <section className="section-box">
       <div className="container mt-50">

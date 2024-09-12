@@ -1,0 +1,43 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "command",
+				"type": "Text"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "triangle",
+				"type": "Text"
+			},
+			"primaryButtonLabel": {
+				"__TYPE__": "FieldContent",
+				"value": "came",
+				"type": "Text"
+			},
+			"primaryButtonLink": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			},
+			"secondaryButtonLabel": {
+				"__TYPE__": "FieldContent",
+				"value": "military",
+				"type": "Text"
+			},
+			"secondaryButtonLink": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			}
+		},
+		"items": []
+	}
+]

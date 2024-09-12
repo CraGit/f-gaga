@@ -1,0 +1,33 @@
+{
+  "id": "najave_list_slice",
+  "type": "SharedSlice",
+  "name": "NajaveListSlice",
+  "description": "NajaveListSlice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "overheading": {
+          "type": "Text",
+          "config": {
+            "label": "Overheading",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

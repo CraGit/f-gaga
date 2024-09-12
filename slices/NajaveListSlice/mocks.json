@@ -1,0 +1,19 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "religious",
+				"type": "Text"
+			},
+			"overheading": {
+				"__TYPE__": "FieldContent",
+				"value": "bring",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

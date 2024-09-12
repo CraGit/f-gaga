@@ -1,0 +1,65 @@
+{
+  "id": "hero_slice",
+  "type": "SharedSlice",
+  "name": "HeroSlice",
+  "description": "HeroSlice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          }
+        },
+        "primaryButtonLabel": {
+          "type": "Text",
+          "config": {
+            "label": "PrimaryButtonLabel",
+            "placeholder": ""
+          }
+        },
+        "primaryButtonLink": {
+          "type": "Link",
+          "config": {
+            "label": "PrimaryButtonLink",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
+        "secondaryButtonLabel": {
+          "type": "Text",
+          "config": {
+            "label": "SecondaryButtonLabel",
+            "placeholder": ""
+          }
+        },
+        "secondaryButtonLink": {
+          "type": "Link",
+          "config": {
+            "label": "SecondaryButtonLink",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

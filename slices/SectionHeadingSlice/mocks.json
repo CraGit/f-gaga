@@ -1,0 +1,19 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "stems",
+				"type": "Text"
+			},
+			"subheading": {
+				"__TYPE__": "FieldContent",
+				"value": "slipped",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

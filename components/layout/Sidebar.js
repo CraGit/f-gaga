@@ -63,6 +63,7 @@ const Sidebar = ({ openClass, handleClose }) => {
                       <Link
                         href="https://forms.gle/qjm3knfJojSDPtQT6"
                         className="active"
+                        onClick={handleClose}
                       >
                         Pristupnica
                       </Link>
@@ -74,7 +75,11 @@ const Sidebar = ({ openClass, handleClose }) => {
                           : "has-children"
                       }
                     >
-                      <Link href="/dokumenti" className="active">
+                      <Link
+                        href="/dokumenti"
+                        className="active"
+                        onClick={handleClose}
+                      >
                         Dokumenti
                       </Link>
                     </li>
@@ -85,7 +90,11 @@ const Sidebar = ({ openClass, handleClose }) => {
                           : "has-children"
                       }
                     >
-                      <Link href="/najave-i-dogadanja" className="active">
+                      <Link
+                        href="/najave-i-dogadanja"
+                        className="active"
+                        onClick={handleClose}
+                      >
                         Najave i događanja
                       </Link>
                     </li>
@@ -96,7 +105,11 @@ const Sidebar = ({ openClass, handleClose }) => {
                           : "has-children"
                       }
                     >
-                      <Link href="/kontakt" className="active">
+                      <Link
+                        href="/kontakt"
+                        className="active"
+                        onClick={handleClose}
+                      >
                         Kontakt
                       </Link>
                     </li>

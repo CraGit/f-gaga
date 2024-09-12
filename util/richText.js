@@ -5,11 +5,7 @@ const rtfComponents = {
     </h1>
   ),
   heading2: ({ children }) => <h2 className="text-heading-3">{children}</h2>,
-  paragraph: ({ children }) => (
-    <p className="py-4 leading-8 text-xl font-normal text-slate-700 ">
-      {children}
-    </p>
-  ),
+  paragraph: ({ children }) => <p className="blog-content">{children}</p>,
   strong: ({ children }) => (
     <strong className="font-medium text-xl tracking-normal leading-10 font-display">
       {children}

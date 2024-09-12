@@ -4,6 +4,41 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+/**
+ * Item in *Dokumenti → Documents*
+ */
+export interface DokumentiDocumentDataDocumentsItem {
+  /**
+   * Document Title field in *Dokumenti → Documents*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dokumenti.documents[].document_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  document_title: prismic.KeyTextField;
+
+  /**
+   * Document Description field in *Dokumenti → Documents*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dokumenti.documents[].document_description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  document_description: prismic.KeyTextField;
+
+  /**
+   * File field in *Dokumenti → Documents*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dokumenti.documents[].file
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  file: prismic.LinkToMediaField;
+}
+
 type DokumentiDocumentDataSlicesSlice = never;
 
 /**
@@ -20,6 +55,39 @@ interface DokumentiDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
+
+  /**
+   * Small Heading field in *Dokumenti*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dokumenti.small_heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  small_heading: prismic.KeyTextField;
+
+  /**
+   * Overtitle field in *Dokumenti*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dokumenti.overtitle
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  overtitle: prismic.KeyTextField;
+
+  /**
+   * Documents field in *Dokumenti*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dokumenti.documents[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  documents: prismic.GroupField<Simplify<DokumentiDocumentDataDocumentsItem>>;
 
   /**
    * Slice Zone field in *Dokumenti*
@@ -749,6 +817,7 @@ declare module "@prismicio/client" {
     export type {
       DokumentiDocument,
       DokumentiDocumentData,
+      DokumentiDocumentDataDocumentsItem,
       DokumentiDocumentDataSlicesSlice,
       HomepageDocument,
       HomepageDocumentData,

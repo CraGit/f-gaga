@@ -288,15 +288,6 @@ const Header = ({ handleOpen, headerStyle }) => {
                 </div>
               </div>
             </div>
-            <div className="header-right">
-              <div className="block-signin">
-                <Link href="/page-signup" legacyBehavior>
-                  <a className="btn btn-default hover-up icon-arrow-right">
-                    Get Started
-                  </a>
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </header>

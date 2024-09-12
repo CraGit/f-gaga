@@ -4,7 +4,7 @@ import { useState } from "react";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import "react-perfect-scrollbar/dist/css/styles.css";
 
-const Sidebar = ({ openClass }) => {
+const Sidebar = ({ openClass, handleClose }) => {
   const [isActive, setIsActive] = useState({
     status: false,
     key: "",
@@ -26,7 +26,16 @@ const Sidebar = ({ openClass }) => {
     <>
       <div
         className={`mobile-header-active mobile-header-wrapper-style perfect-scrollbar ${openClass}`}
+        style={{ zIndex: 9999 }}
       >
+        <div
+          className="burger-icon burger-icon-white burger-close mt-3"
+          onClick={handleClose}
+        >
+          <span className="burger-icon-top" />
+          <span className="burger-icon-mid" />
+          <span className="burger-icon-bottom" />
+        </div>
         <PerfectScrollbar className="mobile-header-wrapper-inner">
           <div className="mobile-header-content-area">
             <div className="perfect-scroll">

@@ -1,8 +1,9 @@
-import '../public/assets/css/style.css'
-import '../public/assets/css/modal.css'
+import "../public/assets/css/style.css";
+import "../public/assets/css/modal.css";
 import "../public/assets/css/swiper-custom.css";
 import React, { useEffect, useState } from "react";
-import Preloader from '../components/elements/Preloader';
+import Preloader from "../components/elements/Preloader";
+import Layout from "@/components/layout/Layout";
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
@@ -20,13 +21,14 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {!loading ? (
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       ) : (
         <Preloader />
       )}
-
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

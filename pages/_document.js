@@ -10,12 +10,10 @@ export default function Document() {
         <meta name="theme-color" content="#C4B28A" />
       </Head>
       <body>
-        <Layout>
-          <Main />
+        <Main />
 
-          <NextScript />
-          {/* <script async src="assets/js/app.js" /> */}
-        </Layout>
+        <NextScript />
+        {/* <script async src="assets/js/app.js" /> */}
       </body>
     </Html>
   );

@@ -18,7 +18,7 @@ const Footer = () => {
                 <span className="color-gray-900 text-heading-6 mr-30 text-mb-sm-20">
                   Nisi član?
                 </span>
-                <Link href="/" legacyBehavior>
+                <Link href="https://forms.gle/qjm3knfJojSDPtQT6" legacyBehavior>
                   <a className="btn btn-square">Pridruži se!</a>
                 </Link>
               </div>

@@ -13,6 +13,44 @@
           "placeholder": ""
         }
       },
+      "small_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Small Heading",
+          "placeholder": ""
+        }
+      },
+      "documents": {
+        "type": "Group",
+        "config": {
+          "label": "Documents",
+          "repeat": true,
+          "fields": {
+            "document_title": {
+              "type": "Text",
+              "config": {
+                "label": "Document Title",
+                "placeholder": ""
+              }
+            },
+            "document_description": {
+              "type": "Text",
+              "config": {
+                "label": "Document Description",
+                "placeholder": ""
+              }
+            },
+            "file": {
+              "type": "Link",
+              "config": {
+                "label": "File",
+                "placeholder": "",
+                "select": "media"
+              }
+            }
+          }
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

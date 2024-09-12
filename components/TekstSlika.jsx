@@ -31,15 +31,6 @@ export default function TekstSlika({
                 </div>
                 <div className="col-lg-6 col-md-12">
                   <div className="block-video icon-pattern">
-                    {/* <a
-                      className="popup-youtube btn-play-video"
-                      onClick={openModal}
-                    ></a> */}
-                    {/* <img
-                      className="img-responsive"
-                      src="assets/imgs/page/homepage1/img-1.png"
-                      alt="Agon"
-                    /> */}
                     <PrismicNextImage
                       field={image}
                       style={{

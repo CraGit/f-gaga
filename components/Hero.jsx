@@ -41,22 +41,6 @@ export default function Hero({
                 </div>
               )}
             </div>
-            {/* <div className="col-lg-5 d-none d-lg-block">
-                  <div className="banner-imgs">
-                    <div className="video-block shape-1">
-                      <a
-                        className="popup-youtube btn-play-video"
-                        onClick={openModal}
-                      ></a>
-                      <span className="text-heading-4">Watch intro video</span>
-                    </div>
-                    <img
-                      className="img-responsive shape-2"
-                      alt="Agon"
-                      src="assets/imgs/page/homepage1/banner.png"
-                    />
-                  </div>
-                </div> */}
           </div>
         </div>
       </div>

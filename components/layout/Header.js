@@ -38,7 +38,10 @@ const Header = ({ handleOpen, headerStyle }) => {
                       </Link>
                     </li>
                     <li className="">
-                      <Link href="#" className="active">
+                      <Link
+                        href="https://forms.gle/qjm3knfJojSDPtQT6"
+                        className="active"
+                      >
                         Pristupnica
                       </Link>
                     </li>

@@ -67,7 +67,7 @@ const TestimonialSlider = () => {
                     <div className="grid-3-img">
                       <img
                         src={`assets/imgs/page/homepage1/user-${item.avatar}`}
-                        alt="Agon"
+                        alt="logo"
                       />
                     </div>
                     <h3 className="text-heading-6 mb-5 mt-20">{item.name}</h3>

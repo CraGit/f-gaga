@@ -51,7 +51,10 @@ const Sidebar = ({ openClass }) => {
                           : "has-children"
                       }
                     >
-                      <Link href="/" className="active">
+                      <Link
+                        href="https://forms.gle/qjm3knfJojSDPtQT6"
+                        className="active"
+                      >
                         Pristupnica
                       </Link>
                     </li>

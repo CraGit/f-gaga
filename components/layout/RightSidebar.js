@@ -30,7 +30,7 @@ const RightSidebar = ({ openClass }) => {
         <PerfectScrollbar className="mobile-header-wrapper-inner">
           <div className="mobile-header-top">
             <div className="user-account">
-              <img src="/assets/imgs/template/ava_1.png" alt="Agon" />
+              <img src="/assets/imgs/template/ava_1.png" alt="alt" />
               <div className="content">
                 <h6 className="user-name">
                   Hi <span className="text-brand">Steven !</span>
@@ -349,12 +349,8 @@ const RightSidebar = ({ openClass }) => {
                 </ul>
               </div>
               <div className="site-copyright color-gray-400">
-                Copyright 2022 © Agon - Agency Template.
-                <br />
-                Designed by
-                <Link href="http://alithemes.com" legacyBehavior>
-                  <a>&nbsp; AliThemes</a>
-                </Link>
+                Copyright 2024 FGAG-a
+                <br />+
               </div>
             </div>
           </div>

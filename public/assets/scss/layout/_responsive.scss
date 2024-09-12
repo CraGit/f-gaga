@@ -93,7 +93,7 @@
 }
 @include media-breakpoint-down(lg) {
     //max-width: 991.98px
-    // New Agon
+    // New 
     .list-partners li {
         width: 28%;
     }
@@ -321,7 +321,7 @@
     {
         background-size: auto 550px;
     }
-    // End Agon
+    // End 
     .mt-md-0 {
         margin-top: 0 !important;
     }
@@ -344,7 +344,7 @@
 }
 @include media-breakpoint-down(md) {
     //max-width: 767.98px
-    // New Agon    
+    // New     
     .icon-wave::before {
         content: none;
     }
@@ -450,7 +450,7 @@
     {
         display: none !important;
     }
-    // End Agon
+    // End 
     .section-title-large {
         font-size: 42px;
     }
@@ -498,7 +498,7 @@
 }
 @include media-breakpoint-down(sm) {
     //max-width: 575.98px
-    // New Agon
+    // New 
     .header {
         padding: 15px 0;
         &.stick {
@@ -675,7 +675,7 @@
             text-align: center !important;
         }
     }
-    // End Agon
+    // End 
     .section-box.mt-70,
     .section-box.mt-80,
     .section-box.mt-100,
@@ -769,7 +769,7 @@
 }
 @include media-breakpoint-down(xsm) {
     //max-width: 450px
-    // New Agon
+    // New 
      .list-steps
     {
         li
@@ -859,7 +859,7 @@
             }
         }
     }
-    // End Agon
+    // End 
 }
 @include media-breakpoint-up(xxl) {
     //min-width: 1400px

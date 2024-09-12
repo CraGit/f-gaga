@@ -49,7 +49,7 @@ const OfferSlider = () => {
                     <div className="grid-2-img">
                       <img
                         src={`assets/imgs/page/homepage1/${item.img}`}
-                        alt="Agon"
+                        alt="logo"
                       />
                     </div>
                     <h3 className="text-heading-5 mt-20">{item.title}</h3>

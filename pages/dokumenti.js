@@ -22,11 +22,11 @@ export default function Page({ page }) {
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-sm-12 col-12">
-              <div className="text-start mb-25">
+              {/* <div className="text-start mb-25">
                 <span className="tag-1 bg-6 color-green-900">
                   {page.data.overtitle}
                 </span>
-              </div>
+              </div> */}
               <h2 className="text-heading-2 color-gray-900 mb-50">
                 {page.data.small_heading}
               </h2>

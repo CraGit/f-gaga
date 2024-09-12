@@ -20,13 +20,6 @@
           "placeholder": ""
         }
       },
-      "overtitle": {
-        "type": "Text",
-        "config": {
-          "label": "Overtitle",
-          "placeholder": ""
-        }
-      },
       "documents": {
         "type": "Group",
         "config": {

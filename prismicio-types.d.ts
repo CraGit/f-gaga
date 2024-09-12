@@ -68,17 +68,6 @@ interface DokumentiDocumentData {
   small_heading: prismic.KeyTextField;
 
   /**
-   * Overtitle field in *Dokumenti*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: dokumenti.overtitle
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  overtitle: prismic.KeyTextField;
-
-  /**
    * Documents field in *Dokumenti*
    *
    * - **Field Type**: Group

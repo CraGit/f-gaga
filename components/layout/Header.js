@@ -46,13 +46,13 @@ const Header = ({ handleOpen, headerStyle }) => {
                       </Link>
                     </li>
                     <li className="">
-                      <Link href="/dokumenti" className="active">
-                        Dokumenti
+                      <Link href="/najave-i-dogadanja" className="active">
+                        Najave i događanja
                       </Link>
                     </li>
                     <li className="">
-                      <Link href="/najave-i-dogadanja" className="active">
-                        Najave i događanja
+                      <Link href="/dokumenti" className="active">
+                        Dokumenti
                       </Link>
                     </li>
 

@@ -20,6 +20,13 @@
           "placeholder": ""
         }
       },
+      "google_map_embed": {
+        "type": "Text",
+        "config": {
+          "label": "Google Map Embed",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

@@ -235,6 +235,17 @@ interface KontaktDocumentData {
   subheading: prismic.KeyTextField;
 
   /**
+   * Google Map Embed field in *Kontakt*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: kontakt.google_map_embed
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  google_map_embed: prismic.KeyTextField;
+
+  /**
    * Slice Zone field in *Kontakt*
    *
    * - **Field Type**: Slice Zone

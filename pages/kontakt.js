@@ -103,6 +103,22 @@ export default function Page({ page }) {
           </div>
         </div>
       </section>
+      <section className="section-box">
+        <div className="container mb-20 mt-60 w-full">
+          <div className="w-full leading-[0] border-0 mt-6">
+            <iframe
+              src={page.data.google_map_embed}
+              allowFullScreen
+              style={{
+                border: 0,
+                width: "100%",
+                height: "450px",
+                borderRadius: "40px",
+              }}
+            ></iframe>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

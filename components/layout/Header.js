@@ -25,6 +25,14 @@ const Header = ({ handleOpen, headerStyle }) => {
           <div className="main-header flex">
             <div className="header-left">
               <div className="header-logo">
+                {/* <Link href="/" className="d-flex">
+                  <Image
+                    alt="logo"
+                    src="/logo-yellow.svg"
+                    height={50}
+                    width={200}
+                  />
+                </Link> */}
                 <Link href="/" className="d-flex">
                   <Image alt="logo" src="/logo.svg" height={50} width={200} />
                 </Link>

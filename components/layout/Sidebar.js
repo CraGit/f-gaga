@@ -61,11 +61,42 @@ const Sidebar = ({ openClass, handleClose }) => {
                       }
                     >
                       <Link
+                        href="/o-nama"
+                        className="active"
+                        onClick={handleClose}
+                      >
+                        O nama
+                      </Link>
+                    </li>
+                    <li
+                      className={
+                        isActive.key == 1
+                          ? "has-children active"
+                          : "has-children"
+                      }
+                    >
+                      <Link
                         href="https://forms.gle/qjm3knfJojSDPtQT6"
                         className="active"
                         onClick={handleClose}
                       >
                         Pristupnica
+                      </Link>
+                    </li>
+
+                    <li
+                      className={
+                        isActive.key == 1
+                          ? "has-children active"
+                          : "has-children"
+                      }
+                    >
+                      <Link
+                        href="/najave-i-dogadanja"
+                        className="active"
+                        onClick={handleClose}
+                      >
+                        Najave i događanja
                       </Link>
                     </li>
                     <li
@@ -81,21 +112,6 @@ const Sidebar = ({ openClass, handleClose }) => {
                         onClick={handleClose}
                       >
                         Dokumenti
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        isActive.key == 1
-                          ? "has-children active"
-                          : "has-children"
-                      }
-                    >
-                      <Link
-                        href="/najave-i-dogadanja"
-                        className="active"
-                        onClick={handleClose}
-                      >
-                        Najave i događanja
                       </Link>
                     </li>
                     <li

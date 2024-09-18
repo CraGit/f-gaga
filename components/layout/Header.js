@@ -38,6 +38,11 @@ const Header = ({ handleOpen, headerStyle }) => {
                       </Link>
                     </li>
                     <li className="">
+                      <Link href="/o-nama" className="active">
+                        O nama
+                      </Link>
+                    </li>
+                    <li className="">
                       <Link
                         href="https://forms.gle/qjm3knfJojSDPtQT6"
                         className="active"

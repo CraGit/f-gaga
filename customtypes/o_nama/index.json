@@ -1,17 +1,11 @@
 {
   "format": "page",
-  "id": "najava_ili_dogadanje_single",
-  "label": "Najava ili događanje Single",
-  "repeatable": true,
+  "id": "o_nama",
+  "label": "O nama",
+  "repeatable": false,
   "status": true,
   "json": {
     "Main": {
-      "uid": {
-        "type": "UID",
-        "config": {
-          "label": "UID"
-        }
-      },
       "heading": {
         "type": "Text",
         "config": {

@@ -22,6 +22,10 @@ const routes = [
     path: "/",
   },
   {
+    type: "o_nama",
+    path: "/o-nama",
+  },
+  {
     type: "najave_i_dogadanja",
     path: "/najave-i-dogadanja",
   },

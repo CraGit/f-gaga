@@ -478,12 +478,111 @@ export type NajaveIDogadanjaDocument<Lang extends string = string> =
     Lang
   >;
 
+type ONamaDocumentDataSlicesSlice = never;
+
+/**
+ * Content for O nama documents
+ */
+interface ONamaDocumentData {
+  /**
+   * Heading field in *O nama*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: o_nama.heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Image field in *O nama*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: o_nama.image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Content field in *O nama*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: o_nama.content
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+
+  /**
+   * Slice Zone field in *O nama*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: o_nama.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<ONamaDocumentDataSlicesSlice> /**
+   * Meta Title field in *O nama*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: o_nama.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *O nama*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: o_nama.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *O nama*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: o_nama.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * O nama document from Prismic
+ *
+ * - **API ID**: `o_nama`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ONamaDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<ONamaDocumentData>,
+    "o_nama",
+    Lang
+  >;
+
 export type AllDocumentTypes =
   | DokumentiDocument
   | HomepageDocument
   | KontaktDocument
   | NajavaIliDogadanjeSingleDocument
-  | NajaveIDogadanjaDocument;
+  | NajaveIDogadanjaDocument
+  | ONamaDocument;
 
 /**
  * Default variation for Heading Slice
@@ -831,6 +930,9 @@ declare module "@prismicio/client" {
       NajaveIDogadanjaDocument,
       NajaveIDogadanjaDocumentData,
       NajaveIDogadanjaDocumentDataSlicesSlice,
+      ONamaDocument,
+      ONamaDocumentData,
+      ONamaDocumentDataSlicesSlice,
       AllDocumentTypes,
       HeadingSlice,
       HeadingSliceVariation,

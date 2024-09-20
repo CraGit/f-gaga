@@ -28,10 +28,10 @@ const Footer = () => {
             <div className="col-lg-3 width-20 mb-30">
               <h4 className="text-heading-5">Kontakt</h4>
               <div className="mt-20 text-body-text color-gray-600 mb-20">
-                Matice hrvatske 2, 21000 Split, Hrvatska
+                Matice hrvatske 15, 21000 Split, Hrvatska
               </div>
               <div className="mt-20 text-body-text color-gray-600">
-                +385(0)21 555-5555
+                +385(0)95 900 6578
               </div>
               <div className="text-body-text color-gray-600">
                 udrugafgaga@gmail.com

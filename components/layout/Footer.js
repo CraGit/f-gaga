@@ -34,7 +34,7 @@ const Footer = () => {
                 +385(0)95 900 6578
               </div>
               <div className="text-body-text color-gray-600">
-                udrugafgaga@gmail.com
+                info@f-gaga.hr
               </div>
             </div>
             {/* <div className="col-lg-3 width-20 mb-30">

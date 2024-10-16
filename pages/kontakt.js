@@ -48,9 +48,7 @@ export default function Page({ page }) {
                   21000 Split
                 </p>
                 {/* <p className="text-body-text color-gray-600">(239) 555-0108</p> */}
-                <p className="text-body-text color-gray-600">
-                  udrugafgaga@gmail.com
-                </p>
+                <p className="text-body-text color-gray-600">info@f-gaga.hr</p>
               </div>
               <div className="col-lg-8">
                 <div className="row">

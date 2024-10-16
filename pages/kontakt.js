@@ -20,7 +20,7 @@ export default function Page({ page }) {
             <h1 className="text-heading-2 color-gray-1000 mb-20">
               {page.data.heading}
             </h1>
-            <p className="text-body-text color-gray-500">
+            <p className="text-body-text color-gray-950">
               {page.data.subheading}
             </p>
           </div>

@@ -21,7 +21,7 @@ export default function Hero({
                 <span className="color-green-900"> studenata </span>
                 FGAG-a Split
               </h1> */}
-              <p className="text-body-lead-large color-gray-500 mt-40 pr-40">
+              <p className="text-body-lead-large color-gray-950 mt-40 pr-40">
                 {subtitle}
               </p>
               {primaryButtonLabel && secondaryButtonLabel && (

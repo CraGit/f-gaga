@@ -3057,7 +3057,9 @@ label {
   position: relative;
 }
 .banner-hero.banner-1 {
-  background-color: #faede3;
+  /* background-color: #faede3;
+   */
+   background-color:rgba(91, 156, 152,.8)
 }
 .banner-hero.banner-1 .container {
   z-index: 2;
@@ -3323,7 +3325,8 @@ label {
   background-size: auto;
 }
 .banner-hero.banner-breadcrums {
-  background-color: #fff3ea;
+  /* background-color: #fff3ea; */
+  background-color:rgba(91, 156, 152,.8);
   padding: 48px 0px;
 }
 .banner-hero.banner-head-image {

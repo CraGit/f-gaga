@@ -45,9 +45,8 @@ const rtfComponents = {
     <ul
       style={{
         listStyleType: "disc", // Show the bullet points
-        marginLeft: "1.5rem",
         marginBottom: "1rem",
-        paddingLeft: "0",
+        paddingLeft: "1.5rem",
       }}
     >
       {children}
@@ -57,9 +56,8 @@ const rtfComponents = {
     <ol
       style={{
         listStyleType: "decimal", // Show the numbering
-        marginLeft: "1.5rem",
         marginBottom: "1rem",
-        paddingLeft: "0",
+        paddingLeft: "1.5rem",
       }}
     >
       {children}

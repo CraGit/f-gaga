@@ -73,6 +73,11 @@ const Header = ({ handleOpen, headerStyle }) => {
                         Članovi
                       </Link>
                     </li>
+                    <li className="">
+                      <Link href="/doniraj" className="active">
+                        Doniraj
+                      </Link>
+                    </li>
 
                     <li className="">
                       <Link href="/kontakt" className="active">

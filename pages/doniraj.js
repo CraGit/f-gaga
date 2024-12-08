@@ -1,7 +1,10 @@
 import Head from "next/head";
 import { isFilled } from "@prismicio/client";
+
+import { PrismicRichText } from "@prismicio/react";
 import { createClient } from "@/prismicio";
 import Hero from "@/components/Hero";
+import rtfComponents from "@/util/richText";
 
 export default function Page({ page }) {
   return (
@@ -13,16 +16,14 @@ export default function Page({ page }) {
         ) : null}
       </Head>
       <Hero heading={page.data.heading} />
-      <section className="mt-50">
+      <section className="section-box mt-50 mb-50">
         <div className="container">
-          <ol className="lista">
-            {page.data.clanovi.map((item, index) => (
-              <li key={index}>
-                <span>{index + 1}. </span>
-                {item.clan}
-              </li>
-            ))}
-          </ol>
+          <div className="row">
+            <PrismicRichText
+              field={page.data.content}
+              components={rtfComponents}
+            />
+          </div>
         </div>
       </section>
     </>
@@ -35,7 +36,7 @@ export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData });
 
   // The query fetches the page's data based on the current URL.
-  const page = await client.getSingle("clanovi");
+  const page = await client.getSingle("doniraj");
 
   return {
     props: { page },

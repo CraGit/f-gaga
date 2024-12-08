@@ -239,6 +239,93 @@ export type DokumentiDocument<Lang extends string = string> =
     Lang
   >;
 
+type DonirajDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Doniraj documents
+ */
+interface DonirajDocumentData {
+  /**
+   * Heading field in *Doniraj*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: doniraj.heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Content field in *Doniraj*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: doniraj.content
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+
+  /**
+   * Slice Zone field in *Doniraj*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: doniraj.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<DonirajDocumentDataSlicesSlice> /**
+   * Meta Title field in *Doniraj*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: doniraj.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Doniraj*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: doniraj.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Doniraj*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: doniraj.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Doniraj document from Prismic
+ *
+ * - **API ID**: `doniraj`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type DonirajDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<DonirajDocumentData>,
+    "doniraj",
+    Lang
+  >;
+
 type HomepageDocumentDataSlicesSlice =
   | NajaveListSliceSlice
   | SectionHeadingSliceSlice
@@ -681,6 +768,7 @@ export type ONamaDocument<Lang extends string = string> =
 export type AllDocumentTypes =
   | ClanoviDocument
   | DokumentiDocument
+  | DonirajDocument
   | HomepageDocument
   | KontaktDocument
   | NajavaIliDogadanjeSingleDocument
@@ -1025,6 +1113,9 @@ declare module "@prismicio/client" {
       DokumentiDocumentData,
       DokumentiDocumentDataDocumentsItem,
       DokumentiDocumentDataSlicesSlice,
+      DonirajDocument,
+      DonirajDocumentData,
+      DonirajDocumentDataSlicesSlice,
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,

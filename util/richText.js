@@ -1,15 +1,117 @@
+import { PrismicNextImage, PrismicLink } from "@prismicio/next";
+
 const rtfComponents = {
   heading1: ({ children }) => (
-    <h1 className="text-4xl font-semibold leading-tight font-display text-slate-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight">
+    <h1
+      style={{
+        fontSize: "2.5rem",
+        fontWeight: "600",
+        lineHeight: "1.3",
+        margin: "1rem 0",
+        color: "#1E293B",
+      }}
+    >
       {children}
     </h1>
   ),
-  heading2: ({ children }) => <h2 className="text-heading-3">{children}</h2>,
-  paragraph: ({ children }) => <p className="blog-content">{children}</p>,
-  strong: ({ children }) => (
-    <strong className="font-medium text-xl tracking-normal leading-10 font-display">
+  heading2: ({ children }) => (
+    <h2
+      style={{
+        fontSize: "2rem",
+        fontWeight: "600",
+        margin: "1rem 0",
+        color: "#1E293B",
+      }}
+    >
       {children}
-    </strong>
+    </h2>
+  ),
+  paragraph: ({ children }) => (
+    <p
+      style={{
+        fontSize: "1.1rem",
+        fontWeight: "normal",
+        lineHeight: "1.8",
+        margin: "0.75rem 0",
+      }}
+    >
+      {children}
+    </p>
+  ),
+  strong: ({ children }) => (
+    <strong style={{ fontWeight: "bold", color: "#1E293B" }}>{children}</strong>
+  ),
+  list: ({ children }) => (
+    <ul
+      style={{
+        listStyleType: "disc", // Show the bullet points
+        marginLeft: "1.5rem",
+        marginBottom: "1rem",
+        paddingLeft: "0",
+      }}
+    >
+      {children}
+    </ul>
+  ),
+  oList: ({ children }) => (
+    <ol
+      style={{
+        listStyleType: "decimal", // Show the numbering
+        marginLeft: "1.5rem",
+        marginBottom: "1rem",
+        paddingLeft: "0",
+      }}
+    >
+      {children}
+    </ol>
+  ),
+  listItem: ({ children }) => (
+    <li
+      style={{
+        fontSize: "1.1rem", // Match paragraph font size
+        fontWeight: "normal",
+        lineHeight: "1.8",
+        marginBottom: "0.5rem",
+      }}
+    >
+      {children}
+    </li>
+  ),
+  oListItem: ({ children }) => (
+    <li
+      style={{
+        fontSize: "1.1rem", // Match paragraph font size
+        fontWeight: "normal",
+        lineHeight: "1.8",
+        marginBottom: "0.5rem",
+      }}
+    >
+      {children}
+    </li>
+  ),
+  hyperlink: ({ node, children }) => (
+    <PrismicLink
+      field={node.data}
+      style={{
+        color: "#0070f3",
+        textDecoration: "underline",
+        cursor: "pointer",
+      }}
+    >
+      {children}
+    </PrismicLink>
+  ),
+  image: ({ node }) => (
+    <div style={{ textAlign: "center", margin: "1rem 0" }}>
+      <PrismicNextImage
+        field={node}
+        style={{
+          maxWidth: "100%",
+          height: "auto",
+          borderRadius: "8px",
+        }}
+      />
+    </div>
   ),
 };
 

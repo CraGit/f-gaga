@@ -37,6 +37,10 @@ const routes = [
     type: "clanovi",
     path: "/clanovi",
   },
+  {
+    type: "doniraj",
+    path: "/doniraj",
+  },
 ];
 
 /**

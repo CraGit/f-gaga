@@ -33,10 +33,10 @@ const routes = [
     type: "najava_ili_dogadanje_single",
     path: "/najave-i-dogadanja/:uid",
   },
-  // {
-  //   type: "page",
-  //   path: "/:uid",
-  // },
+  {
+    type: "clanovi",
+    path: "/clanovi",
+  },
 ];
 
 /**

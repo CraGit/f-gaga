@@ -122,6 +122,21 @@ const Sidebar = ({ openClass, handleClose }) => {
                       }
                     >
                       <Link
+                        href="/clanovi"
+                        className="active"
+                        onClick={handleClose}
+                      >
+                        Članovi
+                      </Link>
+                    </li>
+                    <li
+                      className={
+                        isActive.key == 1
+                          ? "has-children active"
+                          : "has-children"
+                      }
+                    >
+                      <Link
                         href="/kontakt"
                         className="active"
                         onClick={handleClose}

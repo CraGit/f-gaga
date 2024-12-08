@@ -5,6 +5,108 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 /**
+ * Item in *Članovi → Članovi*
+ */
+export interface ClanoviDocumentDataClanoviItem {
+  /**
+   * Član field in *Članovi → Članovi*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Prezime Ime
+   * - **API ID Path**: clanovi.clanovi[].clan
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  clan: prismic.KeyTextField;
+}
+
+type ClanoviDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Članovi documents
+ */
+interface ClanoviDocumentData {
+  /**
+   * Heading field in *Članovi*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clanovi.heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Članovi field in *Članovi*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clanovi.clanovi[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  clanovi: prismic.GroupField<Simplify<ClanoviDocumentDataClanoviItem>>;
+
+  /**
+   * Slice Zone field in *Članovi*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clanovi.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<ClanoviDocumentDataSlicesSlice> /**
+   * Meta Title field in *Članovi*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: clanovi.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Članovi*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: clanovi.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Članovi*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clanovi.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Članovi document from Prismic
+ *
+ * - **API ID**: `clanovi`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ClanoviDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<ClanoviDocumentData>,
+    "clanovi",
+    Lang
+  >;
+
+/**
  * Item in *Dokumenti → Documents*
  */
 export interface DokumentiDocumentDataDocumentsItem {
@@ -577,6 +679,7 @@ export type ONamaDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes =
+  | ClanoviDocument
   | DokumentiDocument
   | HomepageDocument
   | KontaktDocument
@@ -914,6 +1017,10 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      ClanoviDocument,
+      ClanoviDocumentData,
+      ClanoviDocumentDataClanoviItem,
+      ClanoviDocumentDataSlicesSlice,
       DokumentiDocument,
       DokumentiDocumentData,
       DokumentiDocumentDataDocumentsItem,

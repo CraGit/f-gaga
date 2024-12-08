@@ -68,6 +68,11 @@ const Header = ({ handleOpen, headerStyle }) => {
                         Dokumenti
                       </Link>
                     </li>
+                    <li className="">
+                      <Link href="/clanovi" className="active">
+                        Članovi
+                      </Link>
+                    </li>
 
                     <li className="">
                       <Link href="/kontakt" className="active">

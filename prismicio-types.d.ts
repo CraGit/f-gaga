@@ -4,21 +4,6 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-/**
- * Item in *Članovi → Članovi*
- */
-export interface ClanoviDocumentDataClanoviItem {
-  /**
-   * Član field in *Članovi → Članovi*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Prezime Ime
-   * - **API ID Path**: clanovi.clanovi[].clan
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  clan: prismic.KeyTextField;
-}
-
 type ClanoviDocumentDataSlicesSlice = never;
 
 /**
@@ -35,17 +20,6 @@ interface ClanoviDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
-
-  /**
-   * Članovi field in *Članovi*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: clanovi.clanovi[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  clanovi: prismic.GroupField<Simplify<ClanoviDocumentDataClanoviItem>>;
 
   /**
    * Lista članova field in *Članovi*
@@ -1128,7 +1102,6 @@ declare module "@prismicio/client" {
     export type {
       ClanoviDocument,
       ClanoviDocumentData,
-      ClanoviDocumentDataClanoviItem,
       ClanoviDocumentDataSlicesSlice,
       DokumentiDocument,
       DokumentiDocumentData,

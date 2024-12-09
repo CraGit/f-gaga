@@ -169,17 +169,18 @@ const Footer = () => {
                 <span className="color-gray-400 text-body-lead">
                   © F-GAGA 2024
                 </span>
-                <Link href="/" legacyBehavior>
+                {/* <Link href="/" legacyBehavior>
                   <a className="text-body-text color-gray-400 ml-50">
                     Polica privatnosti
                   </a>
-                </Link>
-
-                {/* <Link href="/page-terms" legacyBehavior>
-                  <a className="text-body-text color-gray-400 ml-50">
-                    Terms of service
-                  </a>
                 </Link> */}
+
+                <a
+                  href="https://killerclick.com"
+                  className="text-body-text color-gray-200 ml-50"
+                >
+                  web by Killer Click
+                </a>
               </div>
               {/* <div className="col-md-6 text-center text-lg-end text-md-end">
                 <div className="footer-social">

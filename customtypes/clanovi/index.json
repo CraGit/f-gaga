@@ -13,22 +13,6 @@
           "placeholder": ""
         }
       },
-      "clanovi": {
-        "type": "Group",
-        "config": {
-          "label": "Članovi",
-          "repeat": true,
-          "fields": {
-            "clan": {
-              "type": "Text",
-              "config": {
-                "label": "Član",
-                "placeholder": "Prezime Ime"
-              }
-            }
-          }
-        }
-      },
       "lista_clanova": {
         "type": "StructuredText",
         "config": {

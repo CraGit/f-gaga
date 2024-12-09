@@ -2,6 +2,8 @@ import Head from "next/head";
 import { isFilled } from "@prismicio/client";
 import { createClient } from "@/prismicio";
 import Hero from "@/components/Hero";
+import { PrismicRichText } from "@prismicio/react";
+import rtfComponents from "@/util/richText";
 
 export default function Page({ page }) {
   return (
@@ -13,7 +15,7 @@ export default function Page({ page }) {
         ) : null}
       </Head>
       <Hero heading={page.data.heading} />
-      <section className="mt-50">
+      {/* <section className="mt-50">
         <div className="container">
           <ol className="lista">
             {page.data.clanovi.map((item, index) => (
@@ -23,6 +25,14 @@ export default function Page({ page }) {
               </li>
             ))}
           </ol>
+        </div>
+      </section> */}
+      <section className="mt-50">
+        <div className="container">
+          <PrismicRichText
+            field={page.data.lista_clanova}
+            components={rtfComponents}
+          />
         </div>
       </section>
     </>

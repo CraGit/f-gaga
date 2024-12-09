@@ -48,6 +48,17 @@ interface ClanoviDocumentData {
   clanovi: prismic.GroupField<Simplify<ClanoviDocumentDataClanoviItem>>;
 
   /**
+   * Lista članova field in *Članovi*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clanovi.lista_clanova
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  lista_clanova: prismic.RichTextField;
+
+  /**
    * Slice Zone field in *Članovi*
    *
    * - **Field Type**: Slice Zone
@@ -818,6 +829,16 @@ export interface HeroSliceSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
+
+  /**
+   * Overtitle field in *HeroSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_slice.default.primary.overtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  overtitle: prismic.KeyTextField;
 
   /**
    * Subtitle field in *HeroSlice → Default → Primary*

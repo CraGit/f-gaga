@@ -19,6 +19,13 @@
             "placeholder": ""
           }
         },
+        "overtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Overtitle",
+            "placeholder": ""
+          }
+        },
         "subtitle": {
           "type": "Text",
           "config": {

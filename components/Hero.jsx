@@ -4,6 +4,7 @@ import { PrismicNextLink } from "@prismicio/next";
 export default function Hero({
   heading,
   subtitle,
+  overtitle,
   primaryButtonLabel,
   primaryButtonLink,
   secondaryButtonLabel,
@@ -15,7 +16,8 @@ export default function Hero({
         <div className="container">
           <div className="row">
             <div className="col-lg-7">
-              <h1 className="text-display-2">{heading}</h1>
+              <span class="text-heading-5 ">{overtitle}</span>
+              <h1 className="text-display-2 mt-20">{heading}</h1>
               {/* <h1 className="text-display-2">
                 Udruga
                 <span className="color-green-900"> studenata </span>

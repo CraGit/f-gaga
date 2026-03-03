@@ -8149,8 +8149,12 @@ label {
 .najava-gallery .lightbox-overlay {
   background: rgba(2, 6, 23, 0.85);
 }
-.najava-gallery .lightbox-overlay img {
-  border-radius: 8px;
+/* Lightbox images: make the image fill its container and remove rounded mask */
+.najava-gallery .lightbox-overlay img,
+.najava-gallery .lightbox-overlay picture,
+.najava-gallery .lightbox-overlay .prismic-next-image {
+  border-radius: 0 !important;
+  background: transparent !important;
   max-height: 80vh;
   box-shadow: 0 18px 50px rgba(2, 6, 23, 0.6);
 }
@@ -8171,6 +8175,20 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Ensure arrows stay inside the viewport on small screens */
+@media (max-width: 767px) {
+  .najava-gallery .lightbox-overlay .lightbox-prev {
+    left: 8px !important;
+  }
+  .najava-gallery .lightbox-overlay .lightbox-next {
+    right: 8px !important;
+  }
+  .najava-gallery .lightbox-overlay .lightbox-close {
+    right: 8px !important;
+    top: 8px !important;
+  }
 }
 
 /* Gallery sizing and responsive layout */

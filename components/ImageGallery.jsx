@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { PrismicNextImage } from "@prismicio/next";
 
 export default function ImageGallery({ images }) {
@@ -23,6 +23,11 @@ export default function ImageGallery({ images }) {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [isOpen, items.length]);
+
+  // swipe refs
+  const pointerStartX = useRef(null);
+  const pointerStartY = useRef(null);
+  const pointerDown = useRef(false);
 
   function open(i) {
     setIndex(i);
@@ -67,33 +72,63 @@ export default function ImageGallery({ images }) {
             zIndex: 1000,
           }}
         >
-          <div onClick={(e) => e.stopPropagation()} style={{ position: "relative", maxWidth: "90%", maxHeight: "90%" }}>
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{ position: "relative", maxWidth: "90%", maxHeight: "90%", touchAction: "pan-y" }}
+            onPointerDown={(e) => {
+              pointerDown.current = true;
+              pointerStartX.current = e.clientX;
+              pointerStartY.current = e.clientY;
+              try {
+                e.currentTarget.setPointerCapture(e.pointerId);
+              } catch (err) {}
+            }}
+            onPointerMove={(e) => {
+              if (!pointerDown.current || pointerStartX.current === null) return;
+            }}
+            onPointerUp={(e) => {
+              if (!pointerDown.current || pointerStartX.current === null) return;
+              const dx = e.clientX - pointerStartX.current;
+              const dy = e.clientY - pointerStartY.current;
+              const absDx = Math.abs(dx);
+              const absDy = Math.abs(dy);
+              const SWIPE_THRESHOLD = 50;
+              if (absDx > SWIPE_THRESHOLD && absDx > absDy) {
+                if (dx < 0) next();
+                else prev();
+              }
+              pointerDown.current = false;
+              pointerStartX.current = null;
+              pointerStartY.current = null;
+              try {
+                e.currentTarget.releasePointerCapture(e.pointerId);
+              } catch (err) {}
+            }}
+            onPointerCancel={() => {
+              pointerDown.current = false;
+              pointerStartX.current = null;
+              pointerStartY.current = null;
+            }}
+          >
             {items[index].field ? (
               <PrismicNextImage
                 field={items[index].field}
                 alt={items[index].alt}
-                style={{ maxWidth: "100%", maxHeight: "80vh", objectFit: "contain" }}
+                style={{ width: "100%", height: "auto", maxHeight: "80vh", objectFit: "contain", borderRadius: 0 }}
               />
             ) : (
               <img
                 src={items[index].url}
                 alt={items[index].alt}
-                style={{ maxWidth: "100%", maxHeight: "80vh", display: "block", margin: "0 auto", objectFit: "contain" }}
+                style={{ width: "100%", height: "auto", maxHeight: "80vh", display: "block", margin: "0 auto", objectFit: "contain", borderRadius: 0 }}
               />
             )}
-            {items[index].caption ? (
-              <div style={{ color: "#fff", textAlign: "center", marginTop: 8 }}>{items[index].caption}</div>
-            ) : null}
 
-            <button aria-label="Previous" onClick={prev} style={{ position: "absolute", left: -40, top: "50%", transform: "translateY(-50%)" }}>
-              ‹
-            </button>
-            <button aria-label="Next" onClick={next} style={{ position: "absolute", right: -40, top: "50%", transform: "translateY(-50%)" }}>
-              ›
-            </button>
-            <button aria-label="Close" onClick={() => setIsOpen(false)} style={{ position: "absolute", right: -10, top: -30, color: "#fff", background: "transparent", border: "none", fontSize: 28 }}>
-              ×
-            </button>
+            {items[index].caption ? <div style={{ color: "#fff", textAlign: "center", marginTop: 8 }}>{items[index].caption}</div> : null}
+
+            <button className="lightbox-prev" aria-label="Previous" onClick={prev} style={{ position: "absolute", left: -40, top: "50%", transform: "translateY(-50%)" }}>‹</button>
+            <button className="lightbox-next" aria-label="Next" onClick={next} style={{ position: "absolute", right: -40, top: "50%", transform: "translateY(-50%)" }}>›</button>
+            <button className="lightbox-close" aria-label="Close" onClick={() => setIsOpen(false)} style={{ position: "absolute", right: -10, top: -30, color: "#fff", background: "transparent", border: "none", fontSize: 28 }}>×</button>
           </div>
         </div>
       )}

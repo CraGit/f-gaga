@@ -54,10 +54,7 @@ export default function ImageGallery({ images }) {
             onClick={() => open(i)}
           >
             {it.field ? (
-              <PrismicNextImage
-                field={it.field}
-                className="gallery-thumb"
-              />
+              <PrismicNextImage field={it.field} className="gallery-thumb" />
             ) : (
               <img src={it.url} alt={it.alt} className="gallery-thumb" />
             )}

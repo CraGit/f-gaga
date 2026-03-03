@@ -48,9 +48,16 @@ export default function ImageGallery({ images }) {
     <div className="najava-gallery">
       <div className="block-gallery-1 gallery-grid">
         {items.map((it, i) => (
-          <div key={i} className="detail-gallery gallery-item" onClick={() => open(i)}>
+          <div
+            key={i}
+            className="detail-gallery gallery-item"
+            onClick={() => open(i)}
+          >
             {it.field ? (
-              <PrismicNextImage field={it.field} alt={it.alt} className="gallery-thumb" />
+              <PrismicNextImage
+                field={it.field}
+                className="gallery-thumb"
+              />
             ) : (
               <img src={it.url} alt={it.alt} className="gallery-thumb" />
             )}
@@ -74,7 +81,12 @@ export default function ImageGallery({ images }) {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            style={{ position: "relative", maxWidth: "90%", maxHeight: "90%", touchAction: "pan-y" }}
+            style={{
+              position: "relative",
+              maxWidth: "90%",
+              maxHeight: "90%",
+              touchAction: "pan-y",
+            }}
             onPointerDown={(e) => {
               pointerDown.current = true;
               pointerStartX.current = e.clientX;
@@ -84,10 +96,12 @@ export default function ImageGallery({ images }) {
               } catch (err) {}
             }}
             onPointerMove={(e) => {
-              if (!pointerDown.current || pointerStartX.current === null) return;
+              if (!pointerDown.current || pointerStartX.current === null)
+                return;
             }}
             onPointerUp={(e) => {
-              if (!pointerDown.current || pointerStartX.current === null) return;
+              if (!pointerDown.current || pointerStartX.current === null)
+                return;
               const dx = e.clientX - pointerStartX.current;
               const dy = e.clientY - pointerStartY.current;
               const absDx = Math.abs(dx);
@@ -113,22 +127,78 @@ export default function ImageGallery({ images }) {
             {items[index].field ? (
               <PrismicNextImage
                 field={items[index].field}
-                alt={items[index].alt}
-                style={{ width: "100%", height: "auto", maxHeight: "80vh", objectFit: "contain", borderRadius: 0 }}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  maxHeight: "80vh",
+                  objectFit: "contain",
+                  borderRadius: 0,
+                }}
               />
             ) : (
               <img
                 src={items[index].url}
                 alt={items[index].alt}
-                style={{ width: "100%", height: "auto", maxHeight: "80vh", display: "block", margin: "0 auto", objectFit: "contain", borderRadius: 0 }}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  maxHeight: "80vh",
+                  display: "block",
+                  margin: "0 auto",
+                  objectFit: "contain",
+                  borderRadius: 0,
+                }}
               />
             )}
 
-            {items[index].caption ? <div style={{ color: "#fff", textAlign: "center", marginTop: 8 }}>{items[index].caption}</div> : null}
+            {items[index].caption ? (
+              <div style={{ color: "#fff", textAlign: "center", marginTop: 8 }}>
+                {items[index].caption}
+              </div>
+            ) : null}
 
-            <button className="lightbox-prev" aria-label="Previous" onClick={prev} style={{ position: "absolute", left: -40, top: "50%", transform: "translateY(-50%)" }}>‹</button>
-            <button className="lightbox-next" aria-label="Next" onClick={next} style={{ position: "absolute", right: -40, top: "50%", transform: "translateY(-50%)" }}>›</button>
-            <button className="lightbox-close" aria-label="Close" onClick={() => setIsOpen(false)} style={{ position: "absolute", right: -10, top: -30, color: "#fff", background: "transparent", border: "none", fontSize: 28 }}>×</button>
+            <button
+              className="lightbox-prev"
+              aria-label="Previous"
+              onClick={prev}
+              style={{
+                position: "absolute",
+                left: -40,
+                top: "50%",
+                transform: "translateY(-50%)",
+              }}
+            >
+              ‹
+            </button>
+            <button
+              className="lightbox-next"
+              aria-label="Next"
+              onClick={next}
+              style={{
+                position: "absolute",
+                right: -40,
+                top: "50%",
+                transform: "translateY(-50%)",
+              }}
+            >
+              ›
+            </button>
+            <button
+              className="lightbox-close"
+              aria-label="Close"
+              onClick={() => setIsOpen(false)}
+              style={{
+                position: "absolute",
+                right: -10,
+                top: -30,
+                color: "#fff",
+                background: "transparent",
+                border: "none",
+                fontSize: 28,
+              }}
+            >
+              ×
+            </button>
           </div>
         </div>
       )}

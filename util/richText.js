@@ -1,4 +1,4 @@
-import { PrismicNextImage, PrismicLink } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 
 const rtfComponents = {
   heading1: ({ children }) => (
@@ -88,7 +88,7 @@ const rtfComponents = {
     </li>
   ),
   hyperlink: ({ node, children }) => (
-    <PrismicLink
+    <PrismicNextLink
       field={node.data}
       style={{
         color: "#0070f3",
@@ -97,7 +97,7 @@ const rtfComponents = {
       }}
     >
       {children}
-    </PrismicLink>
+    </PrismicNextLink>
   ),
   image: ({ node }) => (
     <div style={{ textAlign: "center", margin: "1rem 0" }}>

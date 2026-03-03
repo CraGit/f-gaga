@@ -8123,6 +8123,89 @@ label {
   position: relative;
 }
 
+/* Najava gallery custom tweaks to match site styling */
+.najava-gallery .block-gallery-1 {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.najava-gallery .block-gallery-1 .detail-gallery {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ececec;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+}
+.najava-gallery .block-gallery-1 .detail-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.28s ease;
+}
+.najava-gallery .block-gallery-1 .detail-gallery:hover img {
+  transform: scale(1.03);
+}
+
+.najava-gallery .lightbox-overlay {
+  background: rgba(2, 6, 23, 0.85);
+}
+.najava-gallery .lightbox-overlay img {
+  border-radius: 8px;
+  max-height: 80vh;
+  box-shadow: 0 18px 50px rgba(2, 6, 23, 0.6);
+}
+.najava-gallery .lightbox-overlay button[aria-label="Close"] {
+  color: #fff;
+  font-size: 28px;
+  background: transparent;
+  border: none;
+}
+.najava-gallery .lightbox-overlay button[aria-label="Previous"],
+.najava-gallery .lightbox-overlay button[aria-label="Next"] {
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Gallery sizing and responsive layout */
+.najava-gallery .block-gallery-1.gallery-grid {
+  align-items: flex-start;
+}
+.najava-gallery .block-gallery-1 .gallery-item {
+  width: calc(33.333% - 12px); /* three columns on desktop */
+  cursor: pointer;
+  overflow: hidden;
+}
+.najava-gallery .block-gallery-1 .gallery-thumb {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+@media (max-width: 991px) {
+  .najava-gallery .block-gallery-1 .gallery-item {
+    width: calc(33.333% - 12px);
+  }
+}
+
+@media (max-width: 767px) {
+  .najava-gallery .block-gallery-1 {
+    gap: 16px;
+  }
+  /* two columns that take full width on mobile */
+  .najava-gallery .block-gallery-1 .gallery-item {
+    width: calc(50% - 8px);
+  }
+}
+
 .icon-plus {
   position: absolute;
   top: 15px;

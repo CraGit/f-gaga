@@ -5,6 +5,7 @@ import { PrismicRichText, SliceZone } from "@prismicio/react";
 import { createClient } from "@/prismicio";
 import Hero from "@/components/Hero";
 import rtfComponents from "@/util/richText";
+import ImageGallery from "@/components/ImageGallery";
 
 export default function Page({ page }) {
   return (
@@ -24,6 +25,11 @@ export default function Page({ page }) {
               field={page.data.content}
               components={rtfComponents}
             />
+            {page.data.gallery && page.data.gallery.length > 0 ? (
+              <div style={{ marginTop: 24 }}>
+                <ImageGallery images={page.data.gallery} />
+              </div>
+            ) : null}
           </div>
         </div>
       </section>

@@ -17,7 +17,8 @@ export default function ImageGallery({ images }) {
       if (!isOpen) return;
       if (e.key === "Escape") setIsOpen(false);
       if (e.key === "ArrowRight") setIndex((i) => (i + 1) % items.length);
-      if (e.key === "ArrowLeft") setIndex((i) => (i - 1 + items.length) % items.length);
+      if (e.key === "ArrowLeft")
+        setIndex((i) => (i - 1 + items.length) % items.length);
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -40,7 +41,11 @@ export default function ImageGallery({ images }) {
     <div className="najava-gallery">
       <div className="block-gallery-1 gallery-grid">
         {items.map((it, i) => (
-          <div key={i} className="detail-gallery gallery-item" onClick={() => open(i)}>
+          <div
+            key={i}
+            className="detail-gallery gallery-item"
+            onClick={() => open(i)}
+          >
             <img src={it.url} alt={it.alt} className="gallery-thumb" />
           </div>
         ))}
@@ -67,30 +72,55 @@ export default function ImageGallery({ images }) {
             <img
               src={items[index].url}
               alt={items[index].alt}
-              style={{ maxWidth: "100%", maxHeight: "80vh", display: "block", margin: "0 auto" }}
+              style={{
+                maxWidth: "100%",
+                maxHeight: "80vh",
+                display: "block",
+                margin: "0 auto",
+              }}
             />
             {items[index].caption ? (
-              <div style={{ color: "#fff", textAlign: "center", marginTop: 8 }}>{items[index].caption}</div>
+              <div style={{ color: "#fff", textAlign: "center", marginTop: 8 }}>
+                {items[index].caption}
+              </div>
             ) : null}
 
             <button
               aria-label="Previous"
               onClick={prev}
-              style={{ position: "absolute", left: -40, top: "50%", transform: "translateY(-50%)" }}
+              style={{
+                position: "absolute",
+                left: -40,
+                top: "50%",
+                transform: "translateY(-50%)",
+              }}
             >
               ‹
             </button>
             <button
               aria-label="Next"
               onClick={next}
-              style={{ position: "absolute", right: -40, top: "50%", transform: "translateY(-50%)" }}
+              style={{
+                position: "absolute",
+                right: -40,
+                top: "50%",
+                transform: "translateY(-50%)",
+              }}
             >
               ›
             </button>
             <button
               aria-label="Close"
               onClick={() => setIsOpen(false)}
-              style={{ position: "absolute", right: -10, top: -30, color: "#fff", background: "transparent", border: "none", fontSize: 28 }}
+              style={{
+                position: "absolute",
+                right: -10,
+                top: -30,
+                color: "#fff",
+                background: "transparent",
+                border: "none",
+                fontSize: 28,
+              }}
             >
               ×
             </button>
